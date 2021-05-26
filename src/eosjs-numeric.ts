@@ -338,7 +338,7 @@ export const stringToPublicKey = (s: string): Key => {
 /** Convert public `key` to legacy string (base-58) form */
 export const publicKeyToLegacyString = (key: Key): string => {
     if (key.type === KeyType.k1 && key.data.length === publicKeyDataSize) {
-        return keyToString(key, '', 'EOS');
+        return keyToString(key, '', 'JUN');
     } else if (key.type === KeyType.r1 || key.type === KeyType.wa) {
         throw new Error('Key format not supported in legacy conversion');
     } else {
